@@ -11,18 +11,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 
     <style>
-    .banner {
-      background-image: url('imagens/banner-fundo.jpg'); 
-      background-size: cover; 
-      background-position: center; 
-      height: 400px; 
+        .banner {
+            background-image: url('imagens/banner-fundo.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .mainBanner {
+      background-size: cover;
+      background-position: center;
+      height: 300px; 
       display: flex;
-      align-items: center; 
-      justify-content: center; 
-      color: white; 
-      text-align: center; 
+      align-items: center;
+      justify-content: center;
+      color: black;
+      text-align: center;
+      position: relative; 
     }
-  </style>
+
+    .banner .btn-group {
+      position: absolute;
+      bottom: 20px; 
+      left: 20px; 
+    }
+    </style>
 </head>
 
 <body>
@@ -63,8 +80,33 @@
         <div class="row">
             <div class="col-12">
                 <h1>Melhores preços</h1>
-                <p>Preços incríveis em todos os seus itens favoritos
-                Obtenha mais por menos em marcas selecionadas.</p>
+                <p>Preços incríveis em todos os seus itens favoritos</p>
+                <p>Obtenha mais por menos em marcas selecionadas</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mainBanner" style="background-image: url('imagens/celular-banner.jpg');">
+                    <h2>Título do Banner 1</h2>
+                    <p>Texto descritivo para o banner 1.</p>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Comprar</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mainBanner" style="background-image: url('imagens/fones-banner.jpg');">
+                    <h2>Título do Banner 2</h2>
+                    <p>Texto descritivo para o banner 2.</p>
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-primary">Comprar</button>
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
