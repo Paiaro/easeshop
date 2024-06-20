@@ -1,0 +1,2 @@
+# easeshop
+ projeto próprio
