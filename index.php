@@ -22,23 +22,24 @@
             color: white;
             text-align: center;
         }
-        .mainBanner {
-      background-size: cover;
-      background-position: center;
-      height: 300px; 
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: black;
-      text-align: center;
-      position: relative; 
-    }
 
-    .banner .btn-group {
-      position: absolute;
-      bottom: 20px; 
-      left: 20px; 
-    }
+        .mainBanner {
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .mainBanner .btn-group {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
     </style>
 </head>
 
@@ -90,8 +91,8 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="mainBanner" style="background-image: url('imagens/celular-banner.jpg');">
-                    <h2>Título do Banner 1</h2>
-                    <p>Texto descritivo para o banner 1.</p>
+                    <h2>Ofertas de férias</h2>
+                    <p>Marcas de smartphones selecionadas</p>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary">Comprar</button>
 
@@ -100,8 +101,8 @@
             </div>
             <div class="col-md-6">
                 <div class="mainBanner" style="background-image: url('imagens/fones-banner.jpg');">
-                    <h2>Título do Banner 2</h2>
-                    <p>Texto descritivo para o banner 2.</p>
+                    <h2>Comfira já</h2>
+                    <p>Leve o seu som em qualquer lugar</p>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary">Comprar</button>
 
