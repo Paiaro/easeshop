@@ -57,12 +57,10 @@
             margin-bottom: 10px;
         }
 
-        /* Centralizar conteúdo principal */
         .container {
             text-align: center;
         }
 
-        /* Ajustar espaçamento para centralizar na vertical */
         .banner,
         .mainBanner {
             display: flex;
