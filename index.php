@@ -40,6 +40,22 @@
             bottom: 20px;
             left: 20px;
         }
+
+        .categoria {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .categoria img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 
@@ -92,17 +108,16 @@
             <div class="col-md-6">
                 <div class="mainBanner" style="background-image: url('imagens/celular-banner.jpg');">
                     <h2>Ofertas de férias</h2>
-                    <p>Marcas de smartphones selecionadas</p>
+                    <p> Marcas de smartphones selecionadas</p>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary">Comprar</button>
-
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mainBanner" style="background-image: url('imagens/fones-banner.jpg');">
                     <h2>Comfira já</h2>
-                    <p>Leve o seu som em qualquer lugar</p>
+                    <p> Leve o seu som em qualquer lugar</p>
                     <div class="btn-group">
                         <button type="button" class="btn btn-primary">Comprar</button>
 
@@ -110,6 +125,42 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <h2 class="mt-5">Categorias</h2>
+
+    <div class="row mt-3">
+        <div class="col-md-2">
+            <div class="categoria">
+                <img src="imagens/computador.jpg" alt="Computadores">
+                <h3>Computadores</h3>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="categoria">
+                <img src="imagens/celular.jpg" alt="Celulares">
+                <h3>Celulares</h3>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="categoria">
+                <img src="imagens/tablet.jpg" alt="Tablets">
+                <h3>Tablets</h3>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="categoria">
+                <img src="imagens/fone.jpg" alt="Fones">
+                <h3>Fones</h3>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="categoria">
+                <img src="imagens/tv.jpg" alt="TVs">
+                <h3>TVs</h3>
+            </div>
+        </div>
+    </div>
     </div>
 
 </body>
