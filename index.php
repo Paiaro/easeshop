@@ -132,13 +132,13 @@
     <div class="row mt-3">
         <div class="col-md-2">
             <div class="categoria">
-                <img src="imagens/computador.jpg" alt="Computadores">
+                <img src="imagens/pc-categoria.jpg" alt="Computadores">
                 <h3>Computadores</h3>
             </div>
         </div>
         <div class="col-md-2">
             <div class="categoria">
-                <img src="imagens/celular.jpg" alt="Celulares">
+                <img src="imagens/smartphone-categoria.jpg" alt="Celulares">
                 <h3>Celulares</h3>
             </div>
         </div>
