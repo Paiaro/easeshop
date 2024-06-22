@@ -100,14 +100,13 @@
                     <a class="nav-link" href="#">Cadastre-se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link" href="inc/login.php">Login</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Produtos
+                        Todos Produtos
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">todos</a>
                         <a class="dropdown-item" href="#">Computadores</a>
                         <a class="dropdown-item" href="#">Tablets</a>
                         <a class="dropdown-item" href="#">Celulares</a>
@@ -120,6 +119,8 @@
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
             </form>
         </div>
+    </nav>
+    </div>
     </nav>
     <div class="container">
         <div class="container-fluid banner">
