@@ -13,10 +13,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     session_start(); 
     $_SESSION["nome"] = $nome; // Armazenar o nome na sessão
 
-    header("Location: area_cliente.php"); // Redirecionar para a área do cliente
-    exit();
-
-
     try {
         $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -37,5 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $conn = null; // Fechar a conexão
+    header("Location: area_cliente.php"); // Redirecionar para a área do cliente
+    exit();
+
 } 
 ?>
