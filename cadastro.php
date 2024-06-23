@@ -1,46 +1,52 @@
 <?php
+require "inc/conecta.php"; 
+require "inc/funcoes-usuarios.php"; 
 require_once "inc/cabecalho.php";
-require_once "inc/funcoes-usuarios.php";
-require "inc/conecta.php";
 
-if (isset($_POST['cadastrar'])) {
+// Verifica se o formulário foi submetido
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Captura os dados do formulário
     $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
     $email = mysqli_real_escape_string($conexao, $_POST['email']);
     $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 
-    // Criptografando a senha
-    $senha = password_hash($senha, PASSWORD_DEFAULT);
+    // Criptografa a senha
+    $senhaHash = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Inserindo o usuário no banco de dados
-    inserirUsuario($conexao, $nome, $email, $senha);
+    // Insere o usuário no banco de dados
+    inserirUsuario($conexao, $nome, $email, 'cliente', $senhaHash);
 
-    header("location: login.php?cadastro_sucesso");
-    exit;
+    // Redireciona para a página de login após o cadastro
+    header("location: login.php");
+    exit; // Certifique-se de sair após o redirecionamento
 }
 ?>
-
-<div class="row">
-    <div class="bg-white rounded shadow col-12 my-1 py-4">
-        <h2 class="text-center fw-light">Cadastro de Usuário</h2>
-
-        <form action="" method="post" id="form-cadastro" name="form-cadastro" class="mx-auto w-50" autocomplete="off">
-            <div class="mb-3">
-                <label for="nome" class="form-label">Nome:</label>
-                <input class="form-control" type="text" id="nome" name="nome" required>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário - EasyShop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" class="form-control" id="nome" name="nome" required>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">E-mail:</label>
-                <input class="form-control" type="email" id="email" name="email" required>
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
             </div>
-            <div class="mb-3">
-                <label for="senha" class="form-label">Senha:</label>
-                <input class="form-control" type="password" id="senha" name="senha" required>
+            <div class="form-group">
+                <label for="senha">Senha:</label>
+                <input type="password" class="form-control" id="senha" name="senha" required>
             </div>
-            <button class="btn btn-primary btn-lg" name="cadastrar" type="submit">Cadastrar</button>
+            <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
-</div>
-
-<?php
-
-?>
+</body>
+</html>
