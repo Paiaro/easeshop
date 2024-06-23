@@ -24,7 +24,7 @@
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cadastro.php">Cadastre-se</a>
+                    <a class="nav-link" href="cadastro_cliente.php">Cadastre-se</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="login.php">Login</a>
