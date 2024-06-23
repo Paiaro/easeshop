@@ -3,7 +3,7 @@ require "inc/cabecalho.php";
 require_once "inc/funcoes-sessao.php";
 require_once "inc/funcoes-usuarios.php";
 
-// mensagens de feedback
+
 
 if (isset($_GET['campos_obrigatorios'])) {
 	$mensagem = "preencha e-mail e senha";
@@ -17,28 +17,19 @@ if (isset($_GET['campos_obrigatorios'])) {
 
 
 if (isset($_POST['entrar'])) {
-	// validando os campos
 	if (empty($_POST['email']) || empty($_POST['senha'])) {
-		// aplicando parametro na pagina login
 		header("location: login.php?campos_obrigatorios");
 		exit;
 	}
-	//capturando os dados 
-	$email = mysqli_real_escape_string ($conexao, $_POST['email']);
-	$senha = mysqli_real_escape_string ($conexao,$_POST['senha']);
-	// 1) buscando no banco de dados, atravez do email digitado, se existe um usuário cadastrado.
+	$email = mysqli_real_escape_string($conexao, $_POST['email']);
+	$senha = mysqli_real_escape_string($conexao, $_POST['senha']);
 	$usuario = buscarUsuario($conexao, $email);
 
-	// 2) verificação de usuarui e senha se o usuario existe no banco e a senha digitada for igual a do banco de dados...
-
 	if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
-		// então, inicie o processo de login
-
 		login($usuario['id'], $usuario['nome'], $usuario['tipo']);
 		header("location:admin/index.php");
 		exit;
 	} else {
-		// senão, senha esta errada e nao pode entrar no sistema
 		header("location:login.php?dados_incorretos");
 		exit;
 	}
@@ -76,7 +67,3 @@ if (isset($_POST['entrar'])) {
 
 
 </div>
-
-<?php
-require_once "inc/rodape.php";
-?>

@@ -1,3 +1,21 @@
+<?php
+require_once "funcoes-sessao.php";
+verificaAcesso();
+$pagina = basename($_SERVER['PHP_SELF']);
+if (isset($_GET['sair'])) {
+    logout();
+}
+
+function ocultarGerenciador()
+{
+    if (isset($_SESSION['tipo']) && $_SESSION['tipo'] == 'cliente') {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -27,7 +45,7 @@
                     <a class="nav-link" href="cadastro_cliente.php">Cadastre-se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../login.php">Login</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
