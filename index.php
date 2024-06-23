@@ -1,5 +1,6 @@
 
 <?php require_once "inc/cabecalho.php"; ?>
+<link rel="stylesheet" href="css/estilo-index.css">
 <div class="container">
     <div class="container-fluid banner">
         <div class="row">
