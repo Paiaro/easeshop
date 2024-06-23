@@ -4,7 +4,6 @@ require_once "inc/funcoes-sessao.php";
 require_once "inc/funcoes-usuarios.php";
 require "conecta.php";
 
-// Mensagens de feedback
 if (isset($_GET['campos_obrigatorios'])) {
     $mensagem = "Preencha e-mail e senha";
 } elseif (isset($_GET['dados_incorretos'])) {
