@@ -1,18 +1,17 @@
 <?php
-
 require_once "inc/funcoes-usuarios.php";
-require "conecta.php";
+require "inc/conecta.php";
 
 if (isset($_POST['cadastrar'])) {
     $nome = mysqli_real_escape_string($conexao, $_POST['nome']);
     $email = mysqli_real_escape_string($conexao, $_POST['email']);
     $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
-    $tipo = 'user'; 
 
-
+    // Criptografando a senha
     $senha = password_hash($senha, PASSWORD_DEFAULT);
 
-    inserirUsuario($conexao, $nome, $email, $tipo, $senha);
+    // Inserindo o usuário no banco de dados
+    inserirUsuario($conexao, $nome, $email, $senha);
 
     header("location: login.php?cadastro_sucesso");
     exit;

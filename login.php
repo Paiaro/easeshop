@@ -1,9 +1,9 @@
 <?php
-
 require_once "inc/funcoes-sessao.php";
 require_once "inc/funcoes-usuarios.php";
 require "inc/conecta.php";
 
+// Mensagens de feedback
 if (isset($_GET['campos_obrigatorios'])) {
     $mensagem = "Preencha e-mail e senha";
 } elseif (isset($_GET['dados_incorretos'])) {
@@ -15,23 +15,28 @@ if (isset($_GET['campos_obrigatorios'])) {
 }
 
 if (isset($_POST['entrar'])) {
+    // Validando os campos
     if (empty($_POST['email']) || empty($_POST['senha'])) {
+        // Aplicando parâmetro na página login
         header("location: login.php?campos_obrigatorios");
         exit;
     }
 
+    // Capturando os dados 
     $email = mysqli_real_escape_string($conexao, $_POST['email']);
     $senha = mysqli_real_escape_string($conexao, $_POST['senha']);
+
+    // Buscando no banco de dados, através do email digitado, se existe um usuário cadastrado.
     $usuario = buscarUsuario($conexao, $email);
 
-
+    // Verificação de usuário e senha
     if ($usuario !== null && password_verify($senha, $usuario['senha'])) {
-
+        // Inicie o processo de login
         login($usuario['id'], $usuario['nome'], $usuario['tipo']);
-        header("location: admin/index.php");
+        header("location: perfil.php");
         exit;
     } else {
-
+        // Senão, senha está errada e não pode entrar no sistema
         header("location: login.php?dados_incorretos");
         exit;
     }
