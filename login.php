@@ -1,8 +1,8 @@
 <?php
-require "inc/cabecalho.php";
+
 require_once "inc/funcoes-sessao.php";
 require_once "inc/funcoes-usuarios.php";
-require "conecta.php";
+require "inc/conecta.php";
 
 if (isset($_GET['campos_obrigatorios'])) {
     $mensagem = "Preencha e-mail e senha";
@@ -62,5 +62,5 @@ if (isset($_POST['entrar'])) {
 </div>
 
 <?php
-require_once "inc/rodape.php";
+
 ?>

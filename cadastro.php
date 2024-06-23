@@ -1,5 +1,5 @@
 <?php
-require "inc/cabecalho.php";
+
 require_once "inc/funcoes-usuarios.php";
 require "conecta.php";
 
@@ -42,5 +42,5 @@ if (isset($_POST['cadastrar'])) {
 </div>
 
 <?php
-require_once "inc/rodape.php";
+
 ?>

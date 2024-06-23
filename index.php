@@ -97,10 +97,10 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Cadastre-se</a>
+                    <a class="nav-link" href="cadastro.php">Cadastre-se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="inc/login.php">Login</a>
+                    <a class="nav-link" href="login.php">Login</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -203,7 +203,7 @@
                     <h5>Links Úteis</h5>
                     <ul class="list-unstyled">
                         <li><a href="#">Início</a></li>
-                        <li><a href="#">Cadastre-se</a></li>
+                        <li><a href="cadastro.php">Cadastre-se</a></li>
                         <li><a href="#">Produtos</a></li>
                         <li><a href="#">Contato</a></li>
                     </ul>
