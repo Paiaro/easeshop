@@ -28,16 +28,12 @@
             <div class="card-body">
               <h5 class="card-title"><?php echo $produto["nome"]; ?></h5>
               <p class="card-text">R$ <?php echo number_format($produto["preco"], 2, ',', '.'); ?></p>
-              <a href="#" class="btn btn-primary">Ver Detalhes</a> 
+              <a href="#" class="btn btn-primary">Comprar</a> 
             </div>
           </div>
         </div>
       <?php } ?>
     </div> 
   </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
 </body>
-</html>///
+</html>
