@@ -1,4 +1,3 @@
-
 <?php require_once "inc/cabecalho.php"; ?>
 <link rel="stylesheet" href="css/estilo-index.css">
 <div class="container">
@@ -83,7 +82,7 @@
                 <ul class="list-unstyled">
                     <li><a href="#">Início</a></li>
                     <li><a href="cadastro.php">Cadastre-se</a></li>
-                    <li><a href="#">Produtos</a></li>
+                    <li><a href="produtos.php">Produtos</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
             </div>
