@@ -3,33 +3,25 @@ require_once "../inc/cabecalho-admin.php";
 require_once "../inc/funcoes-usuarios.php";
 verificaNivel();
 
-// Pegando o valor do parâmetro id vindo da url
 $id = (int)$_GET["id"];
-// executando a função com o id e recuperando os dados do usuario
 $dadosDoUsuario = lerUmUsuario($conexao, $id);
 
 if (isset($_POST['atualizar'])) {
 	$nome = htmlspecialchars($_POST['nome']);
 	$email = htmlspecialchars($_POST['email']);
 	$tipo = htmlspecialchars($_POST['tipo']);
-
-	// logica para tratamento da senha (se o campo da senha estiver vazio ou se a senha digitada for a mesma já existente no banco, então segnifica usuario NÃO alterou a senha. Portanto, devemos manter a senhas já existente)
-
 	if (empty($_POST['senha']) || password_verify($_POST['senha'], $dadosDoUsuario['senha'])) {
 
-		// manter a mesma senha (copiamos ela para uma variavel)
 		$senha = $dadosDoUsuario['senha'];
 	} else {
 
 		$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 	}
-	// executando UPDATE atraves da função
+	
 	atualizarUsuario($conexao, $id, $nome, $email, $senha, $tipo);
 
-	// redirecionamos para a página que mostra todos os usuários
 	header("location:usuarios.php");
 
-	// caso contrario, pegaremos a senha nova e a criptografamos antes de mandarmos para o banco
 }
 
 ?>
@@ -63,8 +55,8 @@ if (isset($_POST['atualizar'])) {
 				<select class="form-select" name="tipo" id="tipo" required>
 					<option value=""></option>
 
-					<option <?php if ($dadosDoUsuario['tipo'] == 'editor')
-								echo 'selected' ?> value="editor">Editor</option>
+					<option <?php if ($dadosDoUsuario['tipo'] == 'cliente')
+								echo 'selected' ?> value="cliente">Editor</option>
 
 					<option <?php if ($dadosDoUsuario['tipo'] == 'admin')
 								echo 'selected' ?> value="admin">Administrador</option>
@@ -77,7 +69,3 @@ if (isset($_POST['atualizar'])) {
 	</article>
 </div>
 
-
-<?php
-require_once "../inc/rodape-admin.php";
-?>

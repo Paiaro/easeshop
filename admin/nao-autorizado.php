@@ -18,7 +18,3 @@ require_once "../inc/cabecalho-admin.php";
 </article>
 
 
-<?php 
-require_once "../inc/rodape-admin.php";
-?>
-

@@ -1,23 +1,17 @@
 <?php
 require_once "../inc/cabecalho-admin.php";
-// Importando as funções de manipulação dos usuários
 require_once "../inc/funcoes-usuarios.php";
 
 verificaNivel();
 
-// detectando se o botão foi acionado
 if (isset($_POST['inserir'])) {
-	//capturar os daods digitados
 	$nome = htmlspecialchars ($_POST['nome']);
 	$email = htmlspecialchars ($_POST['email']);
 	$tipo = htmlspecialchars ($_POST['tipo']);
-	//criptografando a senha
 	$senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 
-// chamando a função usuario e passando dados
 	inserirUsuario($conexao, $nome, $email, $tipo, $senha);
 
-	// redirecionamento para a lista de usuarios
 	header ("location:usuarios.php");
 }
 ?>
@@ -51,7 +45,7 @@ if (isset($_POST['inserir'])) {
 				<label class="form-label" for="tipo">Tipo:</label>
 				<select class="form-select" name="tipo" id="tipo" required>
 					<option value=""></option>
-					<option value="editor">Editor</option>
+					<option value="cliente">Cliente</option>
 					<option value="admin">Administrador</option>
 				</select>
 			</div>
