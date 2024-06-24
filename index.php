@@ -18,16 +18,16 @@
                     <h2>Ofertas de férias</h2>
                     <p> Marcas de smartphones selecionadas</p>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <a href="produtos.php" class="btn btn-primary">Comprar</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="mainBanner" style="background-image: url('imagens/fones-banner.jpg');">
-                    <h2>Comfira já</h2>
+                    <h2>Confira já</h2>
                     <p> Leve o seu som em qualquer lugar</p>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary">Comprar</button>
+                        <a href="produtos.php" class="btn btn-primary">Comprar</a>
                     </div>
                 </div>
             </div>
@@ -38,34 +38,44 @@
 
     <div class="row mt-3 justify-content-center">
         <div class="col-md-2">
-            <div class="categoria">
-                <img src="imagens/pc-categoria.jpg" alt="Computadores">
-                <h3>Pcs</h3>
-            </div>
+            <a href="produtos.php">
+                <div class="categoria">
+                    <img src="imagens/pc-categoria.jpg" alt="Computadores">
+                    <h3>Pcs</h3>
+                </div>
+            </a>
         </div>
         <div class="col-md-2">
-            <div class="categoria">
-                <img src="imagens/smartphone-categoria.jpg" alt="Celulares">
-                <h3>Celulares</h3>
-            </div>
+            <a href="produtos.php">
+                <div class="categoria">
+                    <img src="imagens/smartphone-categoria.jpg" alt="Celulares">
+                    <h3>Celulares</h3>
+                </div>
+            </a>
         </div>
         <div class="col-md-2">
-            <div class="categoria">
-                <img src="imagens/tablet-categoria.jpg" alt="Tablets">
-                <h3>Tablets</h3>
-            </div>
+            <a href="produtos.php">
+                <div class="categoria">
+                    <img src="imagens/tablet-categoria.jpg" alt="Tablets">
+                    <h3>Tablets</h3>
+                </div>
+            </a>
         </div>
         <div class="col-md-2">
-            <div class="categoria">
-                <img src="imagens/headphones-categoria.jpg" alt="Fones">
-                <h3>Fones</h3>
-            </div>
+            <a href="produtos.php">
+                <div class="categoria">
+                    <img src="imagens/headphones-categoria.jpg" alt="Fones">
+                    <h3>Fones</h3>
+                </div>
+            </a>
         </div>
         <div class="col-md-2">
-            <div class="categoria">
-                <img src="imagens/tvs-categoria.jpg" alt="TVs">
-                <h3>TVs</h3>
-            </div>
+            <a href="produtos.php">
+                <div class="categoria">
+                    <img src="imagens/tvs-categoria.jpg" alt="TVs">
+                    <h3>TVs</h3>
+                </div>
+            </a>
         </div>
     </div>
 </div>
