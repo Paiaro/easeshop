@@ -1,14 +1,9 @@
 <?php
 require_once "../inc/cabecalho-admin.php";
-
 if (!isset($_SESSION)) {
     session_start();
 }
-
-
 ?>
-
-
 <article class="p-5 my-4 rounded-3 bg-white shadow">
     <div class="container-fluid py-1">
         <h2 class="display-4">Olá <?= $_SESSION['nome'] ?></h2>
@@ -34,8 +29,3 @@ if (!isset($_SESSION)) {
         </div>
     </div>
 </article>
-
-
-<?php
-require_once "../inc/rodape-admin.php";
-?>
