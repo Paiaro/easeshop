@@ -60,8 +60,3 @@ $listaUsuarios = lerUsuarios($conexao);
 	</article>
 </div>
 
-
-<?php 
-require_once "../inc/rodape-admin.php";
-?>
-
