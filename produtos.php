@@ -1,45 +1,25 @@
 <?php
 require_once "inc/cabecalho.php";
 require "inc/conecta.php";
-
-// Verificar se a conexão foi estabelecida
-if (!$conexao) {
-  die("Erro ao conectar com o banco de dados.");
-}
-
-$sql = "SELECT * FROM produtos";
-$resultado = mysqli_query($conexao, $sql);
-
-// Verificar se a consulta foi executada corretamente
-if (!$resultado) {
-  die("Erro ao executar a consulta: " . mysqli_error($conexao));
-}
-
-$produtos = mysqli_fetch_all($resultado, MYSQLI_ASSOC);
-
-// Verificar se há produtos para exibir
-if (!$produtos) {
-  echo "<div class='container mt-5'><div class='alert alert-warning'>Nenhum produto encontrado.</div></div>";
-  exit;
-}
+require "funcoes/funcao-produtos.php";
+$listaProdutos = lerProdutos($conexao);
 ?>
 
-<div class="container mt-5">
-  <div class="row">
-    <?php foreach ($produtos as $produto) : ?>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <img src="<?php echo $produto["imagem"]; ?>" class="card-img-top" alt="<?php echo $produto["nome"]; ?>">
-          <div class="card-body">
-            <h5 class="card-title"><?php echo $produto["nome"]; ?></h5>
-            <p class="card-text">R$ <?php echo number_format($produto["preco"], 2, ',', '.'); ?></p>
-            <a href="#" class="btn btn-primary">Comprar</a>
-          </div>
+<div class="row my-1 mx-md-n1">
+    <?php foreach ($listaProdutos as $produto) { ?>
+        <div class="col-md-6 my-1 px-md-1">
+            <article class="card shadow-sm h-100">
+                <a href="noticia.php?id=<?=$produto['id']?>" class="card-link">
+                    <img src="imagens/<?=$produto['imagem']?>" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h3 class="fs-4 card-title"><?=$produto['nome']?></h3>
+                        <p class="card-text"><?=$produto['preco']?></p>
+                    </div>
+                </a>
+            </article>
         </div>
-      </div>
-    <?php endforeach; ?>
-  </div>
-</div>
-</body>
+    <?php } ?>
 
-</html>
+</div>
+
+?>
