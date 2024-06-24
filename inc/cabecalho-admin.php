@@ -1,6 +1,7 @@
 <?php
 require_once "funcoes-sessao.php";
 verificaAcesso();
+
 $pagina = basename($_SERVER['PHP_SELF']);
 if (isset($_GET['sair'])) {
     logout();
@@ -59,6 +60,9 @@ function ocultarGerenciador()
                         <a class="dropdown-item" href="#">TVs</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link fw-bold" href="?sair"> <i class="bi bi-x-circle"></i> Sair</a>
+                    </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
