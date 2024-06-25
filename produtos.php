@@ -27,7 +27,3 @@ $listaProdutos = lerProdutos($conexao);
         </div>
     <?php } ?>
 </div>
-
-<?php
-require_once "inc/rodape.php";
-?>
