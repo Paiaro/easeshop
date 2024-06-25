@@ -1,7 +1,6 @@
 <?php
 require_once "../inc/cabecalho-admin.php";
-require_once "../inc/funcoes-usuarios.php";
-
+require_once "config.php";
 verificaNivel();
 
 if (isset($_POST['inserir'])) {

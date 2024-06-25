@@ -1,7 +1,6 @@
 <?php
+require_once "config.php";
 require_once "inc/cabecalho.php";
-require "inc/conecta.php";
-require "funcoes/funcao-produtos.php";
 $listaProdutos = lerProdutos($conexao);
 ?>
 

@@ -1,5 +1,5 @@
 <?php
-require_once "funcoes-sessao.php";
+require_once "config.php";
 verificaAcesso();
 
 $pagina = basename($_SERVER['PHP_SELF']);
@@ -33,7 +33,7 @@ function ocultarGerenciador()
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="index.php">EasyShop</a>
+        <a class="navbar-brand" href="../index.php">EasyShop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -46,7 +46,7 @@ function ocultarGerenciador()
                     <a class="nav-link" href="#">Cadastre-se</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../login.php">Login</a>
+                    <a class="nav-link" href="../admin/login.php">Login</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

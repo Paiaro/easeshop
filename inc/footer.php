@@ -9,7 +9,7 @@
                 <h5>Links Úteis</h5>
                 <ul class="list-unstyled">
                     <li><a href="#">Início</a></li>
-                    <li><a href="cadastro.php">Cadastre-se</a></li>
+                    <li><a href="#">Cadastre-se</a></li>
                     <li><a href="produtos.php">Produtos</a></li>
                     <li><a href="#">Contato</a></li>
                 </ul>
