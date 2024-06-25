@@ -1,6 +1,8 @@
 <?php 
 require_once "../inc/cabecalho-admin.php";
-require_once "../config.php";
+require_once "../inc/funcoes-usuarios.php";
+require_once "../inc/funcoes-sessao.php";
+
 $id = $_SESSION['id'];
 $dadosDoUsuario = lerUmUsuario($conexao,$id);
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

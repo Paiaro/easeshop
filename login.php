@@ -1,6 +1,9 @@
 <?php
-require_once "config.php";
+require_once "inc/conecta.php";
 require_once "inc/cabecalho.php";
+require_once "inc/funcoes-sessao.php";
+require_once "inc/funcoes-usuarios.php";
+
 
 if (isset($_GET['campos_obrigatorios'])) {
 	$mensagem = "preencha e-mail e senha";

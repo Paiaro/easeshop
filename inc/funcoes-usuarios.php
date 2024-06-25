@@ -1,5 +1,5 @@
 <?php
-require_once "../inc/conecta.php";
+require_once "conecta.php";
 
 
 function inserirUsuario($conexao, $nome, $email, $tipo, $senha)

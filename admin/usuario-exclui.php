@@ -1,5 +1,6 @@
 <?php
-require_once "../config.php";
+require_once "inc/funcoes-usuarios.php";
+require_once "inc/funcoes-sessao.php";
 verificaAcesso();
 verificaNivel();
 

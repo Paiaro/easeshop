@@ -1,5 +1,7 @@
 <?php
-require_once "../config.php";
+require_once "conecta.php";
+require_once "funcoes-sessao.php";
+
 verificaAcesso();
 
 $pagina = basename($_SERVER['PHP_SELF']);
