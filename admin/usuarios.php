@@ -1,6 +1,6 @@
 <?php 
 require_once "../inc/cabecalho-admin.php";
-require_once "config.php";
+require_once "../config.php";
 verificaNivel();
 
 $listaUsuarios = lerUsuarios($conexao);

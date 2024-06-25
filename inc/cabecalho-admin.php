@@ -1,5 +1,5 @@
 <?php
-require_once "config.php";
+require_once "../config.php";
 verificaAcesso();
 
 $pagina = basename($_SERVER['PHP_SELF']);

@@ -1,5 +1,6 @@
 <?php
 require_once "config.php";
+require_once "inc/cabecalho.php";
 
 if (isset($_GET['campos_obrigatorios'])) {
 	$mensagem = "preencha e-mail e senha";

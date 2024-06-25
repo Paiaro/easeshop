@@ -16,5 +16,4 @@ require_once "funcoes/funcoes-usuarios.php";
 require_once "funcoes/funcao-produtos.php"; 
 
 
-session_start();
 ?>
