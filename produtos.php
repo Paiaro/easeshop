@@ -7,15 +7,15 @@ $listaProdutos = lerProdutos($conexao);
 
 <style>
     .card {
-        max-width: 30rem; 
+        max-width: 20rem; 
     }
 </style>
 
 <div class="row my-1 mx-md-n1">
     <?php foreach ($listaProdutos as $produto) { ?>
-        <div class="col-md-4 my-1 px-md-1">
+        <div class="col-md-2 my-1 px-md-1">
             <article class="card shadow-sm h-100">
-                <a href="noticia.php?id=<?=$produto['id']?>" class="card-link">
+                <a href="comprar.php?id=<?=$produto['id']?>" class="card-link">
                     <img src="imagens/<?=$produto['imagem']?>" class="card-img-top" alt="">
                 </a>
                 <div class="card-body">
@@ -32,4 +32,3 @@ $listaProdutos = lerProdutos($conexao);
         </div>
     <?php } ?>
 </div>
-
