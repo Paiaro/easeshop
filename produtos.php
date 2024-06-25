@@ -7,7 +7,7 @@ $listaProdutos = lerProdutos($conexao);
 
 <style>
     .card {
-        max-width: 30rem;
+        max-width: 30rem; 
     }
 </style>
 
@@ -20,10 +20,16 @@ $listaProdutos = lerProdutos($conexao);
                 </a>
                 <div class="card-body">
                     <h3 class="fs-4 card-title"><?=$produto['nome']?></h3>
-                    <p class="card-text"><?=$produto['preco']?></p>
+                    <p class="card-text">
+                        <?php
+                        $precoFormatado = number_format($produto['preco'], 2, ',', '.');
+                        echo "R$ " . $precoFormatado;
+                        ?>
+                    </p>
                     <a href="comprar.php?id=<?=$produto['id']?>" class="btn btn-primary">Comprar</a>
                 </div>
             </article>
         </div>
     <?php } ?>
 </div>
+
