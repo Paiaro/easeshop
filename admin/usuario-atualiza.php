@@ -1,6 +1,6 @@
 <?php
-require_once "../inc/cabecalho-admin.php";
-require_once "inc/funcoes-usuarios.php";
+require_once "../inc/cabecalho.php";
+require_once "../inc/funcoes-usuarios.php";
 
 verificaNivel();
 

@@ -1,5 +1,5 @@
 <?php 
-require_once "../inc/cabecalho-admin.php";
+require_once "../inc/cabecalho.php";
 ?>
 
 
