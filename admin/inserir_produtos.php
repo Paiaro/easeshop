@@ -1,4 +1,4 @@
-<?php require_once "../inc/cabecalho.php"; ?> 
+<?php require_once "../inc/cabecalho-admin.php"; ?> 
 
 <div class="container mt-5">
   <div class="row justify-content-center"> 
@@ -8,7 +8,7 @@
                   <h2>Inserir Novo Produto</h2>
               </div>
               <div class="card-body">
-                  <form action="../funcoes/processar_produto.php" method="post" enctype="multipart/form-data"> 
+                  <form action="../inc/processar_produto.php" method="post" enctype="multipart/form-data"> 
                       <div class="form-group">
                           <label for="nome">Nome do Produto:</label>
                           <input type="text" class="form-control" id="nome" name="nome" required>
