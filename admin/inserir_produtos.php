@@ -1,4 +1,4 @@
-<?php require_once "../inc/cabecalho.php"; ?> 
+<?php require_once "../inc/cabecalho-admin.php"; ?> 
 
 <div class="container mt-5">
   <div class="row justify-content-center"> 
