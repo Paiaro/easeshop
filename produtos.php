@@ -10,7 +10,7 @@ $listaProdutos = lerProdutos($conexao);
         max-width: 20rem; 
     }
 </style>
-
+<link rel="stylesheet" href="css/estilo-index.css">
 <div class="row my-1 mx-md-n1">
     <?php foreach ($listaProdutos as $produto) { ?>
         <div class="col-md-2 my-1 px-md-1">
@@ -32,3 +32,5 @@ $listaProdutos = lerProdutos($conexao);
         </div>
     <?php } ?>
 </div>
+
+<?php require_once "inc/footer.php"; ?>
