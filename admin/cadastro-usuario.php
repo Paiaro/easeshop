@@ -1,7 +1,7 @@
 <?php
-require_once "inc/cabecalho.php";
-require "conecta.php";
-require "funcoes/funcao-usuarios.php";
+require_once "../inc/cabecalho.php";
+require "../inc/conecta.php";
+require "../inc/funcoes-usuarios.php";
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $nome = $_POST['nome'];
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <div class="container">
     <h2>Cadastro de Cliente</h2>
-    <form action="cadastro.php" method="post">
+    <form action="cadastro-usuario.php" method="post">
         <div class="mb-3">
             <label for="nome" class="form-label">Nome</label>
             <input type="text" class="form-control" id="nome" name="nome" required>
@@ -35,5 +35,5 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 <?php
-require_once "inc/rodape.php";
+require_once "../inc/footer.php";
 ?>
