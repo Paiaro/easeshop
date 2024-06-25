@@ -12,7 +12,7 @@ $listaProdutos = lerProdutos($conexao);
 </style>
 <link rel="stylesheet" href="css/estilo-index.css">
 <div class="row my-1 mx-md-n1">
-    <?php foreach ($listaProdutos as $produto) { ?>
+    <?php foreach ($listaProdutos as $produto): ?>
         <div class="col-md-2 my-1 px-md-1">
             <article class="card shadow-sm h-100">
                 <a href="comprar.php?id=<?=$produto['id']?>" class="card-link">
@@ -21,16 +21,17 @@ $listaProdutos = lerProdutos($conexao);
                 <div class="card-body">
                     <h3 class="fs-4 card-title"><?=$produto['nome']?></h3>
                     <p class="card-text">
-                        <?php
-                        $precoFormatado = number_format($produto['preco'], 2, ',', '.');
-                        echo "R$ " . $precoFormatado;
-                        ?>
+                        R$ <?= number_format($produto['preco'], 2, ',', '.') ?>
                     </p>
                     <a href="comprar.php?id=<?=$produto['id']?>" class="btn btn-primary">Comprar</a>
+                    
+                    <form action="adicionar-carrinho.php" method="post" style="display: inline;"> 
+                        <input type="hidden" name="produto_id" value="<?= $produto['id'] ?>">
+                        <button type="submit" class="btn btn-success">Adicionar ao Carrinho</button>
+                    </form>
                 </div>
             </article>
         </div>
-    <?php } ?>
+    <?php endforeach; ?>
 </div>
-
 <?php require_once "inc/footer.php"; ?>
