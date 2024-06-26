@@ -8,7 +8,7 @@
             <div class="col-md-4">
                 <h5>Links Úteis</h5>
                 <ul class="list-unstyled">
-                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Início</a></li> <!-- Links úteis para páginas importantes do site -->
                     <li><a href="#">Cadastre-se</a></li>
                     <li><a href="produtos.php">Produtos</a></li>
                     <li><a href="#">Contato</a></li>
@@ -17,14 +17,14 @@
             <div class="col-md-4">
                 <h5>Contato</h5>
                 <ul class="list-unstyled">
-                    <li>Email: contato@easyshop.com</li>
+                    <li>Email: contato@easyshop.com</li> <!-- Informações de contato da empresa -->
                     <li>Telefone: (11) 1234-5678</li>
                     <li>Endereço: Rua Exemplo, 123, São Paulo - SP</li>
                 </ul>
             </div>
         </div>
         <div class="text-center mt-3">
-            <p>&copy; 2024 EasyShop. Todos os direitos reservados.</p>
+            <p>&copy; 2024 EasyShop. Todos os direitos reservados.</p> <!-- Direitos autorais -->
         </div>
     </div>
 </footer>
