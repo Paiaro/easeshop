@@ -33,6 +33,7 @@ require_once "../inc/cabecalho-admin.php";
                       <button type="submit" class="btn btn-primary">Inserir Produto</button>
                   </form>
               </div>
+              <?php endif; ?>
           </div>
       </div>
   </div>
