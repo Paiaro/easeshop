@@ -1,4 +1,4 @@
-<?php 
+<?php
 require_once "inc/cabecalho.php"; 
 ?>
 <link rel="stylesheet" href="css/estilo-index.css">
@@ -7,7 +7,7 @@ require_once "inc/cabecalho.php";
 <!-- Container principal da página -->
 <div class="container">
     <!-- Carrossel principal -->
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
             <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -15,12 +15,15 @@ require_once "inc/cabecalho.php";
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="imagens/download.gif" class="d-block w-100" alt="Primeiro Slide">
+                <img src="imagens/fundo-banner.png" class="d-block w-100" alt="Primeiro Slide">
                 <div class="carousel-caption d-none d-md-block">
+                    <h1>Melhores preços</h1>
+                    <p>Preços incríveis em todos os seus itens favoritos</p>
+                    <p>Obtenha mais por menos em marcas selecionadas</p>
                 </div>
             </div>
             <div class="carousel-item">
-                <img src="imagens/fundo-banner.png" class="d-block w-100" alt="Segundo Slide">
+                <img src="imagens/download.gif" class="d-block w-100" alt="Segundo Slide">
                 <div class="carousel-caption d-none d-md-block">
                     <h1>Ofertas imperdíveis</h1>
                     <p>Descontos incríveis em produtos selecionados</p>
@@ -29,6 +32,8 @@ require_once "inc/cabecalho.php";
             <div class="carousel-item">
                 <img src="imagens/download (1).gif" class="d-block w-100" alt="Terceiro Slide">
                 <div class="carousel-caption d-none d-md-block">
+                    <h1>Novidades</h1>
+                    <p>Confira os lançamentos e novidades</p>
                 </div>
             </div>
         </div>
@@ -122,7 +127,6 @@ require_once "inc/cabecalho.php";
         </div>
     </div>
 </div>
-
 <?php 
 require_once "inc/footer.php"; 
 ?>
