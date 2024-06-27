@@ -1,6 +1,6 @@
 <?php
 require_once "conecta.php";
-require_once "funcoes-sessao.php"; 
+require_once "funcoes-sessao.php";
 
 verificaAcesso(); // Função para verificar se o usuário está logado
 $pagina = basename($_SERVER['PHP_SELF']); // Obtém o nome do arquivo atual (página) em execução
@@ -49,19 +49,19 @@ function ocultarGerenciador()
                 <li class="nav-item">
                     <a class="nav-link" href="../login.php">Login</a> <!-- Item da barra de navegação para login -->
                 </li>
-                <?php if (!ocultarGerenciador()): ?> <!-- Verifica se deve mostrar o menu de Produtos baseado na função ocultarGerenciador -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Produtos
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="../produtos.php">todos</a> <!-- Links de dropdown para categorias de produtos -->
-                        <a class="dropdown-item" href="#">Computadores</a>
-                        <a class="dropdown-item" href="#">Tablets</a>
-                        <a class="dropdown-item" href="#">Celulares</a>
-                        <a class="dropdown-item" href="#">TVs</a>
-                    </div>
-                </li>
+                <?php if (!ocultarGerenciador()) : ?> <!-- Verifica se deve mostrar o menu de Produtos baseado na função ocultarGerenciador -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Produtos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="../produtos.php">todos</a> <!-- Links de dropdown para categorias de produtos -->
+                            <a class="dropdown-item" href="#">Computadores</a>
+                            <a class="dropdown-item" href="#">Tablets</a>
+                            <a class="dropdown-item" href="#">Celulares</a>
+                            <a class="dropdown-item" href="#">TVs</a>
+                        </div>
+                    </li>
                 <?php endif; ?>
                 <li class="nav-item">
                     <a class="nav-link fw-bold" href="?sair"> <i class="bi bi-x-circle"></i> Sair</a> <!-- Link para encerrar sessão -->

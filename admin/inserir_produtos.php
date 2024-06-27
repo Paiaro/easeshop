@@ -8,6 +8,7 @@ require_once "../inc/cabecalho-admin.php";
       <div class="col-md-6">
           <div class="card">
               <div class="card-header">
+              <?php if (!ocultarGerenciador()) : ?>
                   <h2>Inserir Novo Produto</h2>
               </div>
               <div class="card-body">
