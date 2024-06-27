@@ -1,3 +1,4 @@
+
 <?php 
 require_once "../inc/cabecalho-admin.php"; 
 ?> 
@@ -8,7 +9,6 @@ require_once "../inc/cabecalho-admin.php";
       <div class="col-md-6">
           <div class="card">
               <div class="card-header">
-              <?php if (!ocultarGerenciador()) : ?>
                   <h2>Inserir Novo Produto</h2>
               </div>
               <div class="card-body">
@@ -33,7 +33,7 @@ require_once "../inc/cabecalho-admin.php";
                       <button type="submit" class="btn btn-primary">Inserir Produto</button>
                   </form>
               </div>
-              <?php endif; ?>
+             
           </div>
       </div>
   </div>
