@@ -32,8 +32,6 @@ require_once "inc/cabecalho.php";
             <div class="carousel-item">
                 <img src="imagens/download (1).gif" class="d-block w-100" alt="Terceiro Slide">
                 <div class="carousel-caption d-none d-md-block">
-                    <h1>Novidades</h1>
-                    <p>Confira os lançamentos e novidades</p>
                 </div>
             </div>
         </div>
