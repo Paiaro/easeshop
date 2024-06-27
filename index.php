@@ -1,22 +1,45 @@
 <?php 
-// Inclui o arquivo de cabeçalho da página
 require_once "inc/cabecalho.php"; 
 ?>
-<!-- Link para a folha de estilo específica desta página -->
 <link rel="stylesheet" href="css/estilo-index.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <!-- Container principal da página -->
 <div class="container">
-    <!-- Banner principal -->
-    <div class="container-fluid banner">
-        <div class="row">
-            <div class="col-12">
-                <!-- Título e textos do banner principal -->
-                <h1>Melhores preços</h1>
-                <p>Preços incríveis em todos os seus itens favoritos</p>
-                <p>Obtenha mais por menos em marcas selecionadas</p>
+    <!-- Carrossel principal -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imagens/download.gif" class="d-block w-100" alt="Primeiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/fundo-banner.png" class="d-block w-100" alt="Segundo Slide">
+                <div class="carousel-caption d-none d-md-block">
+                    <h1>Ofertas imperdíveis</h1>
+                    <p>Descontos incríveis em produtos selecionados</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imagens/download (1).gif" class="d-block w-100" alt="Terceiro Slide">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
             </div>
         </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
 
     <!-- Seção de banners secundários -->
@@ -99,6 +122,10 @@ require_once "inc/cabecalho.php";
         </div>
     </div>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
 <?php 
 require_once "inc/footer.php"; 
