@@ -35,9 +35,15 @@ if (!isset($_SESSION)) {
                 </a>
             <?php endif; ?>
             <!-- Botão para adicionar produtos -->
+            <?php if (!ocultarGerenciador()) : ?>
             <a class="btn btn-dark bg-gradient btn-lg" href="inserir_produtos.php">
                 <i class="bi bi-newspaper"></i> <br>
                 Adicionar produtos
+            </a>
+            <?php endif; ?>
+            <a class="btn btn-dark bg-gradient btn-lg" href="carrinho.php">
+                <i class="bi bi-book"></i> <br>
+                Meu carrinho
             </a>
         </div>
     </div>
